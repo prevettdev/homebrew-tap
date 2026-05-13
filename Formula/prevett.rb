@@ -5,13 +5,13 @@
 class Prevett < Formula
   desc "CLI for pre-submission validation of iOS and Android apps"
   homepage "https://github.com/prevettdev/prevett"
-  version "0.1.12"
+  version "0.1.13"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/prevettdev/homebrew-tap/releases/download/v0.1.12/prevett-0.1.12-darwin-amd64.tar.gz"
-      sha256 "517dec3bb4f86cfd3e412faed690dca46923d334c828decc2f807d8fd2069d51"
+      url "https://github.com/prevettdev/homebrew-tap/releases/download/v0.1.13/prevett-0.1.13-darwin-amd64.tar.gz"
+      sha256 "fe8fc919ae91bb82b0c8f875eb5057e5bdcbf92b55a9804aedaa90106e4d078b"
 
       define_method(:install) do
         bin.install "prevett"
@@ -19,8 +19,8 @@ class Prevett < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/prevettdev/homebrew-tap/releases/download/v0.1.12/prevett-0.1.12-darwin-arm64.tar.gz"
-      sha256 "b6d9ee296096820ef764b20be95098b19d44edebdedd1316aca98372a9830386"
+      url "https://github.com/prevettdev/homebrew-tap/releases/download/v0.1.13/prevett-0.1.13-darwin-arm64.tar.gz"
+      sha256 "46abd2177292fb27dbdf4e2c2b538593f65e2e704179ccb620ce97992867290b"
 
       define_method(:install) do
         bin.install "prevett"
@@ -31,16 +31,16 @@ class Prevett < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/prevettdev/homebrew-tap/releases/download/v0.1.12/prevett-0.1.12-linux-amd64.tar.gz"
-      sha256 "5edd3e5d78e2434c4c1b44ca8c5bd7d43233729ef04fde780efccf7fbe6d8d6d"
+      url "https://github.com/prevettdev/homebrew-tap/releases/download/v0.1.13/prevett-0.1.13-linux-amd64.tar.gz"
+      sha256 "f75ad84578ec8251f69a24c0bc2369e137e328f63a0e2411be7d95d46b9d44c6"
       define_method(:install) do
         bin.install "prevett"
         system "#{bin}/prevett", "install"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/prevettdev/homebrew-tap/releases/download/v0.1.12/prevett-0.1.12-linux-arm64.tar.gz"
-      sha256 "336caefc44b84eab9a2f267c98a6e96a3f928b21886ef547ce2cc0912ba5bfd9"
+      url "https://github.com/prevettdev/homebrew-tap/releases/download/v0.1.13/prevett-0.1.13-linux-arm64.tar.gz"
+      sha256 "c863c2c0e7c478b07dfa49dd60e84a940f5d67f724f0fdfec2c7073184c08cbf"
       define_method(:install) do
         bin.install "prevett"
         system "#{bin}/prevett", "install"
